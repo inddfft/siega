@@ -395,7 +395,6 @@ nav {
     background: var(--light);
 }
 
-/* Contact Section */
 .contact {
     padding: 6rem 5%;
     background: var(--gradient-dark);
@@ -458,7 +457,6 @@ nav {
     transform: scale(1.2) rotate(360deg);
 }
 
-/* Footer */
 footer {
     background: var(--dark);
     color: white;
@@ -466,7 +464,6 @@ footer {
     padding: 2rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
