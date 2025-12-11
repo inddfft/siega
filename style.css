@@ -21,7 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar */
 nav {
     background: rgba(0, 31, 63, 0.95);
     backdrop-filter: blur(10px);
@@ -79,7 +78,6 @@ nav {
     width: 100%;
 }
 
-/* Hero Section */
 .hero {
     background: var(--gradient-dark);
     min-height: 100vh;
@@ -273,8 +271,6 @@ nav {
     color: var(--secondary);
     font-weight: bold;
 }
-
-/* Profile Section */
 .profile {
     padding: 6rem 5%;
     background: var(--light);
