@@ -1,4 +1,3 @@
-// Data Kurikulum untuk setiap program
 const curriculumData = {
     SI: {
         title: 'Sistem Informasi (SI)',
@@ -142,17 +141,14 @@ const curriculumData = {
     }
 };
 
-// Fungsi untuk menampilkan kurikulum
 function showCurriculum(program) {
     const data = curriculumData[program];
     const contentDiv = document.getElementById('curriculum-content');
     
-    // Update tombol active
     const buttons = document.querySelectorAll('.curriculum-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
     
-    // Generate HTML untuk kurikulum
     let html = `<h3 style="color: var(--primary); font-size: 2rem; margin-bottom: 2rem; text-align: center;">${data.title}</h3>`;
     
     data.semesters.forEach(sem => {
@@ -197,16 +193,13 @@ function showCurriculum(program) {
     
     contentDiv.innerHTML = html;
     
-    // Scroll ke section kurikulum
     document.getElementById('curriculum').scrollIntoView({ behavior: 'smooth' });
 }
 
-// Fungsi untuk download PDF (simulasi)
 function downloadPDF(program) {
     alert(`Download kurikulum ${program} akan segera dimulai!\n\nCatatan: Ini adalah simulasi. Dalam implementasi nyata, file PDF akan diunduh.`);
 }
 
-// Smooth scroll untuk navigasi
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -220,12 +213,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Load default curriculum saat halaman dimuat
 window.addEventListener('DOMContentLoaded', () => {
     showCurriculum('SI');
 });
 
-// Animasi saat scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -240,7 +231,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe semua section
 document.querySelectorAll('section').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(30px)';
@@ -248,7 +238,6 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Navbar scroll effect
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
